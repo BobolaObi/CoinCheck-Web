@@ -1,6 +1,4 @@
-# CoinCheck-Web
-This is the Web Version of the Coin Chek andorid application
-=======
+
 # CoinCheckWeb
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
