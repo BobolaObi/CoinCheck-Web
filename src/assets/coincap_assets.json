@@ -12,7 +12,7 @@
             "priceUsd": "38476.5433596146552217",
             "changePercent24Hr": "-1.3517047465224108",
             "vwap24Hr": "38620.6249719877935918",
-            "explorer": "https://blockchain.info/"
+            "explorer?": "https://blockchain.info/"
         },
         {
             "id": "ethereum",

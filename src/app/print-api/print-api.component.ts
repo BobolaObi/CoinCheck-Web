@@ -3,7 +3,8 @@ import {DataServiceService} from "../../Services/data-service.service";
 import {Todo} from "../../Interface/todo";
 import {Coincodex} from "../../Interface/coincodex";
 import {Coincap} from "../../Interface/coincap";
-
+import all_coins from "src/assets/all_coins.json";
+import coincap_assests from "src/assets/all_coins.json";
 /**
  * Hello
  */
@@ -16,9 +17,9 @@ import {Coincap} from "../../Interface/coincap";
 export class PrintApiComponent implements OnInit {
 
   todoData?: Todo[];
-  coinCodex? : Coincodex[];
-  coinCap? : Coincap[];
-
+  coinCodex? : Coincodex[] = all_coins;
+  coinCap? : Coincap[] = coincap_assests;
+  localCodex = "src/app/all_coins.json";
   title = "Print Api with Angular Http";
 
   constructor(public dataService: DataServiceService) {
@@ -30,8 +31,8 @@ export class PrintApiComponent implements OnInit {
     this.onGetAllTodoData();
 
     //Coin Codex
-    this.onGetSingleCoincodex();
-    this.onGetAllCoincodex();
+    // this.onGetSingleCoincodex();
+    // this.onGetAllCoincodex();
 
     //Coin Cap
     this.onGetSingleCoincap();
@@ -62,41 +63,41 @@ export class PrintApiComponent implements OnInit {
     );
   }
 
-  //Getting Coin Codex Data
-  onGetSingleCoincodex(){
-    this.dataService.getSingleCoincodex().subscribe((codexData)=>{
-      console.log(codexData);
-      this.coinCodex = codexData;
-    },
-      (error:any) => console.log(error),
-      () => console.log("All Data Returned")
-    );
-  }
-  onGetAllCoincodex(){
-    this.dataService.getSingleCoincodex().subscribe((codexData)=>{
-        console.log(codexData);
-        this.coinCodex = codexData;
-      },
-      (error:any) => console.log(error),
-      () => console.log("All Data Returned")
-    );
-  }
+  // //Getting Coin Codex Data
+  // onGetSingleCoincodex(){
+  //   this.dataService.getSingleCoincodex().subscribe((codexData)=>{
+  //     console.log(codexData);
+  //     this.coinCodex = codexData;
+  //   },
+  //     (error:any) => console.log(error),
+  //     () => console.log("All Data Returned")
+  //   );
+  // }
+  // onGetAllCoincodex(){
+  //   this.dataService.getSingleCoincodex().subscribe((codexData)=>{
+  //       console.log(codexData);
+  //       this.coinCodex = codexData;
+  //     },
+  //     (error:any) => console.log(error),
+  //     () => console.log("All Data Returned")
+  //   );
+  // }
 
 
   //Getting Coin Cap Data
   onGetSingleCoincap(){
-    this.dataService.getSingleCoincodex().subscribe((capData)=>{
+    this.dataService.getAllCoincap().subscribe((capData)=>{
         console.log(capData);
-        this.coinCodex = capData;
+        this.coinCap = capData;
       },
       (error:any) => console.log(error),
       () => console.log("All Data Returned")
     );
   }
   onGetAllCoincap(){
-    this.dataService.getSingleCoincodex().subscribe((capData)=>{
+    this.dataService.getSingleCoincap().subscribe((capData)=>{
         console.log(capData);
-        this.coinCodex = capData;
+        this.coinCap = capData;
       },
       (error:any) => console.log(error),
       () => console.log("All Data Returned")
