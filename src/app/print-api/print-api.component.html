@@ -1,0 +1,103 @@
+<h1>To Do Lists</h1>
+<p>Data from JSON Placeholder</p>
+<br>
+
+<table id="customers">
+  <!--  Table is the best option for formatting. I mean it exist for a reason duh!-->
+  <tr>
+    <th> ID</th>
+    <th> User Id</th>
+    <th>Title</th>
+    <th>State</th>
+  </tr>
+  <tr  *ngFor="let items of todoData">
+    <td>{{items.id}}</td>
+    <td>{{items.userId}}</td>
+    <td>{{items.title}}</td>
+    <td>{{items.completed}}</td>
+  </tr>
+</table>
+
+
+<p>Data From CoinCodex</p>
+
+
+<table id="codex">
+  <tr>
+    <th> name</th>
+    <th> price_change_7D_percent </th>
+    <th>price_change_1D_percent</th>
+    <th>last_price_usd</th>
+  </tr>
+  <tr  *ngFor="let items of coinCodex">
+    <td>{{items.name}}</td>
+    <td>{{items.price_change_7D_percent}}</td>
+    <td>{{items.price_change_1D_percent}}</td>
+    <td>{{items.last_price_usd}}</td>
+  </tr>
+</table>
+
+<p>Data from CoinCap</p>
+<table id = "cap">
+
+  <tr>
+    <th> rank</th>
+    <th> name </th>
+    <th>priceUsd</th>
+    <th>marketCapUsd</th>
+  </tr>
+
+  <tr  *ngFor="let items of coinCap">
+    <td>{{items.rank}}</td>
+    <td>{{items.name}}</td>
+    <td>{{items.priceUsd}}</td>
+    <td>{{items.marketCapUsd}}</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  #todo , #codex, #cap {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+  #customers tr:hover {background-color: #ddd;}
+
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+</style>
+<!--Initial Method-->
+<!--<div *ngFor="let items of todoData; let i = index">-->
+<!--  <p>{{ items | json}}</p>-->
+<!--  <p>-->
+<!--    {{i + 1}}-->
+<!--  </p>-->
+<!--&lt;!&ndash;  <p>{{items.id}}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;  <p>{{items.userId}}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;  <p>{{items.title}}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;  <p>{{items.completed}}</p>&ndash;&gt;-->
+<!--</div>-->

@@ -1,0 +1,34 @@
+export interface Coincodex {
+  symbol: string
+  display_symbol: string
+  name: string
+  aliases: string
+  shortname: string
+  last_price_usd: number
+  market_cap_rank: any
+  volume_rank: number
+  price_change_1H_percent: number
+  price_change_1D_percent: number
+  price_change_7D_percent: number
+  price_change_30D_percent: number
+  price_change_90D_percent: number
+  price_change_180D_percent: number
+  price_change_365D_percent: number
+  price_change_3Y_percent: number
+  price_change_5Y_percent: number
+  price_change_ALL_percent: number
+  price_change_YTD_percent: number
+  volume_24_usd: number
+  display: string
+  trading_since: string
+  supply: number
+  last_update: string
+  ico_end: any
+  include_supply: string
+  use_volume: string
+  growth_all_time: any
+  ccu_slug: string
+  image_t: number
+  market_cap_usd: number
+  categories: any[]
+}
