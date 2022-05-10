@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~normalize.css';
+
+ body {
+  margin: auto;
+   min-width: 920px;
+  max-width: 1920px;
+  max-height: 1000px;
+}
