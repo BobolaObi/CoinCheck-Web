@@ -1,59 +1,81 @@
-<h1>To Do Lists</h1>
-<p>Data from JSON Placeholder</p>
-<br>
+<h1 style="background-color: #99e271">Coin Gecko</h1>
+<div>
+  <table>
+    <tr>
+      <th>Logo</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>MarketCap</th>
+    </tr>
+    <tr *ngFor="let coins of coinGecko | slice:0:10; let i=index">
 
-<table id = "todo">
-  <!--  Table is the best option for formatting. I mean it exist for a reason duh!-->
-  <tr>
-    <th> ID</th>
-    <th> User Id</th>
-    <th>Title</th>
-    <th>State</th>
-  </tr>
-  <tr  *ngFor="let items of todoData">
-    <td>{{items.id}}</td>
-    <td>{{items.userId}}</td>
-    <td>{{items.title}}</td>
-    <td>{{items.completed}}</td>
-  </tr>
-</table>
+      <td><img style="width: 25px" src="{{coins.image}}" alt="crypto-Image"></td>
+      <td>{{coins.name}}</td>
+      <td>{{coins.current_price}}</td>
+      <td>{{coins.market_cap}}</td>
 
-<h1>LOCAL CoinCap</h1>
-<p>Data from CoinCap</p>
-<table>
-  <tr>
-    <th>rank</th>
-    <th> name </th>
-    <th>priceUsd</th>
-    <th>marketCapUsd</th>
-  </tr>
-  <tr  *ngFor="let items of coinCap">
-    <td>{{items.id}}</td>
-    <td>{{items.name}}</td>
-    <td>{{items.marketCapUsd}}</td>
-    <td>{{"hhh" + items.explorer}}</td>
-  </tr>
-</table>
+    </tr>
+  </table>
+</div>
 
 
 
-<h1>LOCAL</h1>
-<p>Data From CoinCodex</p>
+<!--<h1>To Do Lists</h1>-->
+<!--<p>Data from JSON Placeholder</p>-->
+<!--<br>-->
 
-<table>
-  <tr>
-    <th> name</th>
-    <th> price_change_7D_percent </th>
-    <th>price_change_1D_percent</th>
-    <th>last_price_usd</th>
-  </tr>
-  <tr  *ngFor="let items of coinCodex">
-    <td>{{items.name}}</td>
-    <td>{{items.price_change_7D_percent}}</td>
-    <td>{{items.price_change_1D_percent}}</td>
-    <td>{{"CAD " + items.last_price_usd / 0.78}}</td>
-  </tr>
-</table>
+<!--<table id = "todo">-->
+<!--  &lt;!&ndash;  Table is the best option for formatting. I mean it exist for a reason duh!&ndash;&gt;-->
+<!--  <tr>-->
+<!--    <th> ID</th>-->
+<!--    <th> User Id</th>-->
+<!--    <th>Title</th>-->
+<!--    <th>State</th>-->
+<!--  </tr>-->
+<!--  <tr  *ngFor="let items of todoData">-->
+<!--    <td>{{items.id}}</td>-->
+<!--    <td>{{items.userId}}</td>-->
+<!--    <td>{{items.title}}</td>-->
+<!--    <td>{{items.completed}}</td>-->
+<!--  </tr>-->
+<!--</table>-->
+
+<!--<h1>LOCAL CoinCap</h1>-->
+<!--<p>Data from CoinCap</p>-->
+<!--<table>-->
+<!--  <tr>-->
+<!--    <th>rank</th>-->
+<!--    <th> name </th>-->
+<!--    <th>priceUsd</th>-->
+<!--    <th>marketCapUsd</th>-->
+<!--  </tr>-->
+<!--  <tr  *ngFor="let items of coinCap">-->
+<!--    <td>{{items.id}}</td>-->
+<!--    <td>{{items.name}}</td>-->
+<!--    <td>{{items.marketCapUsd}}</td>-->
+<!--    <td>{{"hhh" + items.explorer}}</td>-->
+<!--  </tr>-->
+<!--</table>-->
+
+
+
+<!--<h1>LOCAL</h1>-->
+<!--<p>Data From CoinCodex</p>-->
+
+<!--<table>-->
+<!--  <tr>-->
+<!--    <th> name</th>-->
+<!--    <th> price_change_7D_percent </th>-->
+<!--    <th>price_change_1D_percent</th>-->
+<!--    <th>last_price_usd</th>-->
+<!--  </tr>-->
+<!--  <tr  *ngFor="let items of coinCodex">-->
+<!--    <td>{{items.name}}</td>-->
+<!--    <td>{{items.price_change_7D_percent}}</td>-->
+<!--    <td>{{items.price_change_1D_percent}}</td>-->
+<!--    <td>{{"CAD " + items.last_price_usd / 0.78}}</td>-->
+<!--  </tr>-->
+<!--</table>-->
 
 
 
@@ -79,6 +101,11 @@
     text-align: left;
     background-color: rgba(63, 91, 177, 0.65);
     color: #ffffff;
+  }
+
+  th {
+    position: sticky;
+    top: 0;
   }
 </style>
 <!--Initial Method-->

@@ -5,9 +5,7 @@ import {Coincodex} from "../../Interface/coincodex";
 import {Coincap} from "../../Interface/coincap";
 import all_coins from "src/assets/all_coins.json";
 import coincap_assests from "src/assets/all_coins.json";
-/**
- * Hello
- */
+import {Coingecko} from "../../Interface/Coingecko";
 
 @Component({
   selector: 'app-print-api',
@@ -21,6 +19,8 @@ export class PrintApiComponent implements OnInit {
   coinCap? : Coincap[] = coincap_assests;
   localCodex = "src/app/all_coins.json";
   title = "Print Api with Angular Http";
+
+  coinGecko? : Coingecko[];
 
   constructor(public dataService: DataServiceService) {
 
@@ -37,6 +37,9 @@ export class PrintApiComponent implements OnInit {
     //Coin Cap
     this.onGetSingleCoincap();
     this.onGetAllCoincap();
+
+    //Coin Gecko
+    this.ongetAllCoinGeckos();
 
   }
 
@@ -103,5 +106,18 @@ export class PrintApiComponent implements OnInit {
       () => console.log("All Data Returned")
     );
   }
+
+  //Real APIS CoinGecko
+  ongetAllCoinGeckos(){
+    this.dataService.getAllCoinGeckos().subscribe(
+      (coinGeckoData)=>{
+        console.log(coinGeckoData);
+        this.coinGecko = coinGeckoData
+      },
+      (error: any) => console.log(error),
+      ()=> console.log("CoinGeckos Returned")
+    );
+  }
+
 
 }
