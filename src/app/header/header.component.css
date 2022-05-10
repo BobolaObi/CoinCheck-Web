@@ -1,22 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body {
+  background-repeat: no-repeat;
+  background-image: url("src/assets/Phones/phones.svg");
+  background-color:#062A60;
+  background-position: 50vw 20%;
+  /*background-image: linear-gradient(180deg, #062A60 0%, #6F6FA0 100%);*/
+  /*background-image: url("src/assets/Phones/phones.svg"),linear-gradient(180deg, #062A60 0%, #6F6FA0 100%);*/
+}
+
 main {
   display: flex;
   flex-direction: row;
 }
-main section{
+
+main {
   padding-left:10%;
 }
-main p{
+
+section p{
   color: white;
-  font-family: "Roboto";
-  font-size: 2.9em;
-  width: 14%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  width: 55%;
+  margin-bottom:250px;
 }
 
 main section > img{
-
   /*Coin Check Logo*/
-  width: 19vh;
+  width: 35%;
   margin-top: 10vh;
+  padding-bottom: 30px;
 }
  /*img[alt="phones"]{*/
  /*  width: 300px; height: 337px;*/
@@ -33,26 +47,15 @@ main section > img{
 /*   object-position: 70px 50px;*/
 /*}*/
 
-body {
-  /* Rectangle 15 */
-  height: 100vh;
-  width: 100vw;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(180deg, #062A60 0%, #6F6FA0 100%);
 
-  /*background-image: url("src/assets/Phones/phones.svg");*/
-  /*background-image: url("src/assets/Phones/phones.svg"),linear-gradient(180deg, #062A60 0%, #6F6FA0 100%);*/
-  /*background-color:#062A60;*/
-  /*background-position: 4% 15%;*/
-}
 header nav {
   display: flex;
   flex-direction: row;
 }
 nav img {
   min-width: 3vh;
-  max-width: 3.5vw;
-  padding: 2%;
+  max-width: 1.7vw;
+  padding: 30px;
 }
 nav > a:first-child {
   padding-left: 30px;
@@ -67,7 +70,7 @@ nav a {
   padding: 15px 50px;
   color: white;
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 nav ul > li:last-child {
