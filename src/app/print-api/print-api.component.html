@@ -12,20 +12,18 @@
   <div>
     <table>
       <tr>
-
         <th>Rank</th>
-<!--        <th>Logo</th>-->
         <th>Name</th>
         <th>Price</th>
         <th>MarketCap</th>
       </tr>
       <tr *ngFor="let coins of coinGecko | slice:0:35; let i=index">
         <td>{{coins.market_cap_rank }}</td>
-        <td><img style="width: 25px; padding: 0px 20px" src="{{coins.image}}  " alt="img">{{coins.name | uppercase}}</td>
+        <td><img style="width: 25px; padding: 0px 20px" src="{{coins.image}}  " alt="img">{{coins.name}}</td>
         <td>{{ +coins.current_price | currency}}</td>
         <td>{{ coins.market_cap | currency}}</td>
-
       </tr>
+
     </table>
 
 

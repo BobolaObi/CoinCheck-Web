@@ -1,10 +1,29 @@
-body
-{
-  background-color:#062A60;
+footer {
+  padding-left: 30px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  background-color: #062A60;
+  margin-top: 190px;
+  align-items: center;
+  justify-content: space-between;
 }
 
+footer > div{
+  flex-direction: column;
+}
 
+img{
+  width: 30vw;
 
+}
 
-
+h2{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 1000;
+}
+p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
 
