@@ -3,7 +3,8 @@ body {
   background-repeat: no-repeat;
   background-image: url("src/assets/Phones/phones.svg");
   background-color:#062A60;
-  background-position: 50vw 20%;
+  background-position: 20vw 20%;
+  /*background-position: 50vw 20%;*/
   /*background-image: linear-gradient(180deg, #062A60 0%, #6F6FA0 100%);*/
   /*background-image: url("src/assets/Phones/phones.svg"),linear-gradient(180deg, #062A60 0%, #6F6FA0 100%);*/
 }

@@ -31,8 +31,8 @@ table th {
 }
 
 th {
-  position: sticky;
-  top: 0;
+  /*position: sticky;*/
+  /*top: 0;*/
 }
 
 /*table tr:nth-child(even){background-color: #c71f1f;}*/
