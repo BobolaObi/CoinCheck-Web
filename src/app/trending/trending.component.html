@@ -1,0 +1,18 @@
+<body >
+
+
+<marquee behavior="scroll"  loop="infinite" direction="left">
+<div class="sliders" *ngFor="let row of trendingData | slice:0:10; let i=index" >
+<span>
+  <p id="coin-Name">{{row.name}}</p>
+  <p>{{row.symbol | uppercase}}</p>
+  <p>{{row.current_price | currency}}</p>
+</span>
+
+  <div>
+    <img id="fix0"src="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1027.svg" alt="img" >
+    <p id="fix">{{row.market_cap_change_percentage_24h}}</p>
+  </div>
+</div>
+</marquee>
+</body>
