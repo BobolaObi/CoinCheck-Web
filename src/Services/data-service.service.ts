@@ -20,6 +20,8 @@ export class DataServiceService {
   coinCapApi = environment.coinCap;
   //Real Api
   coinGecko = environment.coinGecko;
+  geckoTrending = environment.geckoTrending;
+
 
 
   constructor(private http: HttpClient) { }
@@ -57,6 +59,10 @@ export class DataServiceService {
   //Coin Gecko
   getAllCoinGeckos(){
       return this.http.get<any>(`${this.coinGecko}`);
+  }
+
+  getTrendingCurrency(){
+    return this.http.get<any>(`${this.geckoTrending}`)
   }
 
   // getCurrency(currency:string){
