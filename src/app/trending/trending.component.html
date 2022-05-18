@@ -1,18 +1,20 @@
 <body >
 
 
-<marquee behavior="scroll"  loop="infinite" direction="left">
-<div class="sliders" *ngFor="let row of trendingData | slice:0:10; let i=index" >
+
+<!--<img src="https://alternative.me/crypto/fear-and-greed-index.png" alt="fear and Greed Index">-->
+<!--<marquee   loop="infinite" direction="left">-->
+<div class="sliders" *ngFor="let row of trendingData | slice:0:6; let i=index" >
 <span>
   <p id="coin-Name">{{row.name}}</p>
   <p>{{row.symbol | uppercase}}</p>
-  <p>{{row.current_price | currency}}</p>
+  <p >{{row.current_price | currency: '$':'symbol':'0.1-1'}}</p>
 </span>
 
   <div>
     <img id="fix0"src="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1027.svg" alt="img" >
-    <p id="fix">{{row.market_cap_change_percentage_24h}}</p>
+    <p id="fix">{{row.market_cap_change_percentage_24h | percent : "2.1-1"}}</p>
   </div>
 </div>
-</marquee>
+<!--</marquee>-->
 </body>

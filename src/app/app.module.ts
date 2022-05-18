@@ -9,6 +9,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { TrendingComponent } from './trending/trending.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
