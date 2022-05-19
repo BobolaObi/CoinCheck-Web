@@ -3,7 +3,7 @@
 
 
 <!--<img src="https://alternative.me/crypto/fear-and-greed-index.png" alt="fear and Greed Index">-->
-<!--<marquee   loop="infinite" direction="left">-->
+<marquee   loop="infinite" direction="left">
 <div class="sliders" *ngFor="let row of trendingData | slice:0:6; let i=index" >
 <span>
   <p id="coin-Name">{{row.name}}</p>
@@ -16,5 +16,5 @@
     <p id="fix">{{row.market_cap_change_percentage_24h | percent : "2.1-1"}}</p>
   </div>
 </div>
-<!--</marquee>-->
+</marquee>
 </body>
