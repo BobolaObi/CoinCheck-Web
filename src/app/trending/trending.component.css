@@ -1,4 +1,5 @@
 body {
+  overflow: hidden;
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
@@ -19,6 +20,7 @@ p{
   font-size: large;
 }
 .sliders {
+
   margin: 20px 10px;
   background-color: white;
   width: 260px;
